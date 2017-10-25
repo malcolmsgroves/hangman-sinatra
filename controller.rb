@@ -1,6 +1,6 @@
 
 require "sinatra"
-require "sinatra/reloader"
+require "sinatra"
 require_relative "hangman"
 
 game = Hangman.new
