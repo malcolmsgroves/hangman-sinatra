@@ -1,11 +1,10 @@
 
 require "sinatra"
-require "sinatra"
 require_relative "hangman"
 
 game = Hangman.new
 
-get '/hangman' do
+get '/' do
   if game.in_progress?
     guess = params["guess"]
     game.make_guess(guess)
