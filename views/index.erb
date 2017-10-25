@@ -1,0 +1,23 @@
+<html>
+<head>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div>
+    <p>
+      <%= "#{num_wrong} of 6 wrong answers" %>
+    </p>
+    <p>
+      <%= guess_string %>
+    </p>
+    <% if in_progress %>
+      <form>
+        <input type='text' name='guess' />
+        <input type='submit' value='Guess!' />
+      </form>
+    <% else %>
+      <%= message %>
+    <% end %>
+    </div>
+</body>
+</html>
