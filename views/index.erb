@@ -5,19 +5,22 @@
 <body>
   <div>
     <p>
-      <%= "#{num_wrong} of 6 wrong answers" %>
+      <%= "#{session[:num_wrong]} of 6 wrong answers" %>
     </p>
     <p>
-      <%= guess_string %>
+      <%= session[:guess_string] %>
     </p>
-    <% if in_progress %>
-      <form>
+
+      <form method="POST" action="/">
         <input type='text' name='guess' />
         <input type='submit' value='Guess!' />
       </form>
-    <% else %>
-      <%= message %>
-    <% end %>
+    <p>
+      <%= session[:message] %>
+    </p>
+    <form method="GET" action="/newgame">
+			<input type="submit" value="Restart?">
+		</form>
     </div>
 </body>
 </html>

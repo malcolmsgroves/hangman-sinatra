@@ -1,0 +1,19 @@
+<html>
+<head>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div>
+    <p>
+      <%= session[:guess_string] %>
+    </p>
+    <p>
+      "You lose :( <br>
+      <%= "The word was #{session[:answer]}" %>
+    </p>
+    <form method="GET" action="/newgame">
+			<input type="submit" value="New Game?">
+		</form>
+  </div>
+</body>
+</html>

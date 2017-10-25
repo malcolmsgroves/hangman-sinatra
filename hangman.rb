@@ -1,6 +1,6 @@
 class Hangman
 
-  attr_accessor :num_wrong
+  attr_accessor :num_wrong, :answer, :guess, :max_wrong
   @@max_wrong = 6
 
   def initialize
